@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Candle Shop</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body class="profile-page">
+    <div class="profile-container">
+        <h1>Update Profile</h1>
+        <form id="profileForm">
+            <div class="form-group">
+                <label for="currentUsername">Current Username:</label>
+                <input type="text" id="currentUsername" name="currentUsername" required>
+            </div>
+            <div class="form-group">
+                <label for="newUsername">New Username:</label>
+                <input type="text" id="newUsername" name="newUsername" required>
+            </div>
+            <div class="form-group">
+                <label for="newPassword">New Password:</label>
+                <input type="password" id="newPassword" name="newPassword" required>
+            </div>
+            <button type="submit">Update Profile</button>
+        </form>
+    </div>
+    <script src="profile.js"></script>
+</body>
+</html>

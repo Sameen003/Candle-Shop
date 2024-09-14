@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Candle</title>
+    <!-- Link to Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .frosted-background {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body class="bg-gray-200 min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="bg-emerald-500 p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-white text-2xl font-bold">Melted Warmth</h1>
+        </div>
+    </nav>
+
+    <!-- Main Container with Frosted Background -->
+    <div class="frosted-background max-w-lg w-full mx-auto mt-12 p-8 rounded-lg shadow-md">
+
+        <!-- Title -->
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Edit Candle</h1>
+
+        <!-- Edit Candle Form -->
+        <form id="editCandleForm" enctype="multipart/form-data" class="space-y-4">
+            
+            <!-- Select Candle -->
+            <div class="form-group">
+                <label for="candleSelect" class="block text-lg font-medium text-gray-700">Select Candle to Edit:</label>
+                <select id="candleSelect" name="candleSelect" 
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500 sm:text-sm">
+                </select>
+            </div>
+
+            <!-- Candle Name -->
+            <div class="form-group">
+                <label for="name" class="block text-lg font-medium text-gray-700">Candle Name:</label>
+                <input type="text" id="name" name="name" 
+                       class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500 sm:text-sm">
+            </div>
+
+            <!-- Candle Detail -->
+            <div class="form-group">
+                <label for="detail" class="block text-lg font-medium text-gray-700">Candle Details:</label>
+                <input type="text" id="detail" name="detail" 
+                       class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500 sm:text-sm">
+            </div>
+
+            <!-- Candle Price -->
+            <div class="form-group">
+                <label for="price" class="block text-lg font-medium text-gray-700">Candle Price (Tk):</label>
+                <input type="number" id="price" name="price" step="0.01" 
+                       class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500 sm:text-sm">
+            </div>
+
+            <!-- Candle Picture -->
+            <div class="form-group">
+                <label for="picture" class="block text-lg font-medium text-gray-700">Candle Picture:</label>
+                <input type="file" id="picture" name="picture" accept="image/*" 
+                       class="mt-1 block w-full text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:bg-emerald-500 file:text-white hover:file:bg-emerald-600">
+            </div>
+
+            <!-- Update Candle Button -->
+            <button type="submit" class="w-full bg-emerald-500 text-white font-bold py-2 px-4 rounded hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-opacity-50">Update Candle</button>
+        </form>
+
+        <!-- Delete Candle Button -->
+        <button id="deleteButton" class="mt-6 w-full bg-red-500 text-white font-bold py-2 px-4 rounded hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-50">Delete Candle</button>
+    </div>
+
+    <script src="edit-candle.js"></script>
+</body>
+</html>

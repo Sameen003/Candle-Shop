@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users - Candle Shop</title>
+    <link rel="stylesheet" href="users-admin.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search by username or email">
+            <button onclick="searchUsers()">Search</button>
+        </div>
+        <div class="table-container">
+            <table class="user-table" id="userTable">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- User rows will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="users-admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+td button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+td button.delete {
+    background-color: #e74c3c;
+}
+
+td button.confirm {
+    background-color: #2ecc71;
+}
+
+td input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+tfoot {
+    font-weight: bold;
+}
+
+tfoot tr {
+    background-color: #eee;
+}
+
+tfoot td {
+    text-align: right;
+    padding-right: 2rem;
+}

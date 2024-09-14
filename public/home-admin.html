@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Candle Shop Admin</title>
+    <!-- Link to Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+    <!-- Navbar -->
+    <nav class="bg-emerald-800 p-4 flex justify-between items-center">
+        <!-- Left-aligned buttons -->
+        <div class="flex space-x-4">
+            <button class="text-white bg-emerald-700 hover:bg-emerald-600 px-4 py-2 rounded" onclick="goToUsers()">Users</button>
+            <div class="relative group">
+                <button class="text-white bg-emerald-700 hover:bg-emerald-600 px-4 py-2 rounded">Orders</button>
+                <!-- Dropdown content -->
+                <div class="absolute hidden group-hover:block bg-white text-gray-800 shadow-lg rounded mt-2">
+                    <a href="process-order.html" class="block px-4 py-2 hover:bg-gray-100">Process Orders</a>
+                    <a href="deliveryinprogress.html" class="block px-4 py-2 hover:bg-gray-100">Delivery in Progress</a>
+                    <a href="successfullydelivered.html" class="block px-4 py-2 hover:bg-gray-100">Successfully Delivered</a>
+                </div>
+            </div>
+            <button class="text-white bg-emerald-700 hover:bg-emerald-600 px-4 py-2 rounded" onclick="addNewCandle()">Add Candles</button>
+            <button class="text-white bg-emerald-700 hover:bg-emerald-600 px-4 py-2 rounded" onclick="editCandles()">Edit Candles</button>
+        </div>
+
+        <!-- Right-aligned Logout button -->
+        <button class="text-white bg-red-600 hover:bg-red-500 px-4 py-2 rounded" onclick="logout()">Logout</button>
+    </nav>
+
+    <!-- Main content -->
+    <div class="flex-grow flex items-center justify-center">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold text-gray-800 mb-6">Hello Admin</h1>
+        </div>
+    </div>
+
+    <!-- JavaScript functions -->
+    <script>
+        function logout() {
+            window.location.href = 'login.html';
+        }
+
+        function goToUsers() {
+            window.location.href = 'users-admin.html';
+        }
+
+        function goToOrders() {
+            window.location.href = 'orders.html';
+        }
+
+        function addNewCandle() {
+            window.location.href = 'add-candle.html';
+        }
+
+        function editCandles() {
+            window.location.href = 'edit-candle.html';
+        }
+    </script>
+</body>
+</html>

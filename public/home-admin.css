@@ -1,0 +1,80 @@
+/* Ensure the nav bar spans the full width */
+.navbar {
+    position: fixed; /* Makes the navbar stick at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a slight shadow */
+    z-index: 1000; /* Ensures it stays on top of other elements */
+    display: flex;
+    justify-content: space-between; /* Spread buttons evenly */
+    align-items: center;
+}
+
+/* Style each nav button */
+.nav-button {
+    background: transparent;
+    border: 1px solid #fff; /* White border for visibility */
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 15px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    position: relative; /* Needed for dropdown positioning */
+}
+
+.nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #000; /* Dark text color on hover */
+}
+
+/* Logout button to align to the far right */
+.logout-button {
+    margin-left: auto; /* Pushes the logout button to the far right */
+}
+
+/* Dropdown menu for Orders button */
+.orders-button {
+    position: relative; /* Position relative to parent for dropdown */
+}
+
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute; /* Positioned relative to parent */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    min-width: 160px; /* Minimum width for dropdown */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Box shadow for dropdown */
+    z-index: 1; /* Ensure it stays on top */
+    top: 100%; /* Position below the button */
+    left: 0; /* Align to the left of the button */
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Light hover effect */
+}
+
+/* Show dropdown on hover */
+.orders-button:hover .dropdown-content {
+    display: block;
+}
+
+/* Style for the home container */
+.home-container {
+    margin-top: 60px; /* Ensure content is not hidden behind the fixed navbar */
+    text-align: center;
+}
+
+.home-container h1 {
+    font-size: 2rem;
+    color: #333;
+}

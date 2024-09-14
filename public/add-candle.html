@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Candle - Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-yellow-600 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-white font-bold text-xl">
+                <a>Melted Warmth</a>
+            </div>
+            <div class="space-x-6">
+
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container mx-auto mt-8 p-6 bg-white shadow-lg rounded-lg">
+        <h1 class="text-2xl font-bold mb-6 text-gray-800">Add a New Candle</h1>
+        
+        <!-- Form to Add Candle -->
+        <form id="addCandleForm" enctype="multipart/form-data" class="space-y-4">
+            <!-- Candle Name -->
+            <div class="form-group">
+                <label for="candleName" class="block text-gray-700 font-medium">Candle Name:</label>
+                <input type="text" id="candleName" name="name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" required>
+            </div>
+
+            <!-- Candle Detail -->
+            <div class="form-group">
+                <label for="candleDetail" class="block text-gray-700 font-medium">Candle Detail:</label>
+                <textarea id="candleDetail" name="detail" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" required></textarea>
+            </div>
+
+            <!-- Candle Price -->
+            <div class="form-group">
+                <label for="candlePrice" class="block text-gray-700 font-medium">Price (TK):</label>
+                <input type="number" id="candlePrice" name="price" step="0.01" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" required>
+            </div>
+
+            <!-- Candle Picture -->
+            <div class="form-group">
+                <label for="candlePicture" class="block text-gray-700 font-medium">Picture:</label>
+                <input type="file" id="candlePicture" name="picture" accept="image/*" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-3 px-6 rounded-lg font-medium transition-colors duration-300">
+                Add Candle
+            </button>
+        </form>
+
+        <!-- Message Display -->
+        <div id="message" class="mt-4 text-lg font-bold hidden"></div>
+    </div>
+
+    <script src="add-candle.js"></script>
+</body>
+
+</html>

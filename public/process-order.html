@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Orders</title>
+    <!-- Include Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="process-order.js" defer></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <div class="container mx-auto p-6">
+        <h1 class="text-3xl font-bold text-center mb-6">Process Orders</h1>
+
+        <div class="overflow-x-auto">
+            <table id="ordersTable" class="min-w-full bg-white rounded-lg shadow-md">
+                <thead>
+                    <tr class="bg-gray-200 text-gray-700 uppercase text-sm leading-normal">
+                        <th class="py-3 px-6 text-left">Name</th>
+                        <th class="py-3 px-6 text-left">Contact</th>
+                        <th class="py-3 px-6 text-left">Delivery</th>
+                        <th class="py-3 px-6 text-left">Location</th>
+                        <th class="py-3 px-6 text-left">Email</th>
+                        <th class="py-3 px-6 text-right">Total Price</th>
+                        <th class="py-3 px-6 text-left">Items</th>
+                        <th class="py-3 px-6 text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-600 text-sm font-light">
+                    <!-- Orders will be dynamically populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

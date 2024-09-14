@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Candle Shop</title>
+    <!-- Link to Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Frosted grey background */
+        body {
+            background: rgba(189, 189, 189, 0.5); /* Light grey background with opacity */
+            backdrop-filter: blur(8px); /* Frosted glass effect */
+        }
+        /* Transparent emerald green navbar */
+        .navbar {
+            background: rgba(1, 99, 67, 0.8); /* Transparent emerald green background */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col bg-gray-200">
+    <!-- Navbar -->
+    <nav class="navbar p-4 flex justify-between items-center text-white">
+        <!-- Leftmost text for "Melted Warmth" -->
+        <div class="text-xl font-bold">
+            Melted Warmth
+        </div>
+        <div class="flex space-x-4">
+            <button class="bg-emerald-700 hover:bg-emerald-600 px-4 py-2 rounded transition duration-300 ease-in-out" onclick="goToProfile()">Profile</button>
+            <button class="bg-emerald-700 hover:bg-emerald-600 px-4 py-2 rounded transition duration-300 ease-in-out" onclick="logout()">Logout</button>
+            <button class="bg-emerald-700 hover:bg-emerald-600 px-4 py-2 rounded transition duration-300 ease-in-out" onclick="goToAddressBook()">Address Book</button>
+            <button class="bg-emerald-700 hover:bg-emerald-600 px-4 py-2 rounded transition duration-300 ease-in-out" onclick="goToCart()">Cart</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="flex-grow">
+        <div class="text-center py-10">
+    
+        </div>
+        <div class="container mx-auto px-4">
+            <!-- Product Container with 1 product per row -->
+            <div class="grid grid-cols-1 gap-8" id="productContainer">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Script file for JS functionality -->
+    <script src="home.js"></script>
+</body>
+</html>
